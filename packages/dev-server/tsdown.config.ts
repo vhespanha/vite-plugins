@@ -3,5 +3,5 @@ import { sharedConfig } from '../../tsdown.shared.ts'
 
 export default defineConfig({
   ...sharedConfig,
-  format: ['esm', 'cjs'],
+  format: ['esm'],
 })

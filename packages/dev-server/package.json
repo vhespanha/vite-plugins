@@ -2,7 +2,7 @@
   "name": "@hono/vite-dev-server",
   "description": "Vite dev-server plugin for Hono",
   "version": "0.25.3",
-  "types": "./dist/index.d.cts",
+  "types": "./dist/index.d.mts",
   "module": "./dist/index.mjs",
   "type": "module",
   "scripts": {
@@ -18,38 +18,14 @@
     "dist"
   ],
   "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    },
-    "./bun": {
-      "import": "./dist/adapter/bun.mjs",
-      "require": "./dist/adapter/bun.cjs"
-    },
-    "./cloudflare": {
-      "import": "./dist/adapter/cloudflare.mjs",
-      "require": "./dist/adapter/cloudflare.cjs"
-    },
-    "./node": {
-      "import": "./dist/adapter/node.mjs",
-      "require": "./dist/adapter/node.cjs"
-    },
-    "./conninfo": {
-      "import": "./dist/conninfo.mjs",
-      "require": "./dist/conninfo.cjs"
-    },
-    "./dev-server": {
-      "import": "./dist/dev-server.mjs",
-      "require": "./dist/dev-server.cjs"
-    },
-    "./types": {
-      "import": "./dist/types.mjs",
-      "require": "./dist/types.cjs"
-    },
-    "./utils": {
-      "import": "./dist/utils.mjs",
-      "require": "./dist/utils.cjs"
-    },
+    ".": "./dist/index.mjs",
+    "./bun": "./dist/adapter/bun.mjs",
+    "./cloudflare": "./dist/adapter/cloudflare.mjs",
+    "./node": "./dist/adapter/node.mjs",
+    "./conninfo": "./dist/conninfo.mjs",
+    "./dev-server": "./dist/dev-server.mjs",
+    "./types": "./dist/types.d.mts",
+    "./utils": "./dist/utils.mjs",
     "./package.json": "./package.json"
   },
   "author": "Yusuke Wada <yusuke@kamawada.com> (https://github.com/yusukebe)",
@@ -99,6 +75,5 @@
   "dependencies": {
     "@hono/node-server": "^1.19.11",
     "minimatch": "^9.0.3"
-  },
-  "main": "./dist/index.cjs"
+  }
 }
