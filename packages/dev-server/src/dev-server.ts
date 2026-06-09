@@ -72,6 +72,7 @@ export const defaultOptions: Required<Omit<DevServerOptions, 'env' | 'adapter' |
     /^\/favicon\.ico$/,
     /^\/static\/.+/,
     /^\/node_modules\/.*/,
+    /^\/.vite\/.*/,
     /.*\.svelte$/,
     /.*\.vue$/,
     /.*\.js$/,
